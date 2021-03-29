@@ -12,7 +12,7 @@ Report
 -----------------------
 ### What can happen if 1 measurement is delayed ?
 
-If a measurement is delayed, this can propagate through the estimation and result in a greater covariance (uncertainty) of the estimation of position.
+If a measurement is delayed, this can propagate through the filter and result in a greater covariance (uncertainty) of the estimation of position.
 
 ### Now your IMU gets damaged. Does your implementation deal with it? How could you handle it?
 
