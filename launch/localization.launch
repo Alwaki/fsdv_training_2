@@ -1,0 +1,22 @@
+<launch>
+  <!-- Launch Rosbag -->
+  <node pkg="rosbag" type="play" name="player" output="screen" args="--clock $(find localization_training)/bags/data.bag"/>
+
+  <!-- Launch EKF node for fusing IMU and encoder data -->
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_node_continuous" clear_params="true">
+    <rosparam command="load" file="$(find localization_training)/cfg/ekf_continuous.yaml" />
+  </node>
+
+  <!-- Launch EKF node for fusing filtered odometry with GPS -->
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_node_gps" clear_params="true">
+    <rosparam command="load" file="$(find localization_training)/cfg/ekf_discontinuous.yaml" />
+
+     <remap from="odometry/filtered" to="output"/>
+
+  </node>
+
+  <!-- Launch subscriber node for calculating error between GPS and fused data -->
+  <node pkg="localization_training" type="error_calculation.py" name="error_calculation" clear_params="true">
+  </node>
+
+</launch>
