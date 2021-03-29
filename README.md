@@ -4,6 +4,6 @@ This repository contains the files for the second task in normal ROS package ord
 
 To use the module, download it and run the launch file from within the package launch folder. This can be run using the command:
 
-´roslaunch localization.launch`.
+`roslaunch localization.launch`.
 
 Furthermore, this module depends on the ROS package robot-localization. This package does not come with the default desktop ROS installation, and as such must be added separately. 
