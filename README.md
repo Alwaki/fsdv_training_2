@@ -8,8 +8,8 @@ To use the module, download it and run the launch file from within the package l
 Furthermore, this module depends on the ROS package robot-localization. This package does not come with the default desktop ROS installation, and as such must be added separately. 
 
 # Report
-### How was the problem solved
-
+## Description
+To solve this problem, I utilized the package robot_localization from the ROS framework. By using two separate EKF filters, I could integrate the sensor data in two steps. Initially, the sensor data from the speedometer and the IMU unit was fused in continuous time. Then the result of this fusion was again fused with the GPS data. As the GPS data was given in nav_msgs/Odometry form, the built in package for nav_sat integration could not be used. As such, this structure of two common EKF filters was used instead.
 
 ## Answers to Questions
 
