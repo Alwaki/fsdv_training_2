@@ -1,4 +1,4 @@
-Task 2 - Introduction and running code
+# Task 2 - Introduction and running code
 ----------------------
 This repository contains the files for the second task in normal ROS package order. An additional report is included below in this README, answering some specified questions concerning the task.
 
@@ -8,7 +8,7 @@ To use the module, download it and run the launch file from within the package l
 
 Furthermore, this module depends on the ROS package robot-localization. This package does not come with the default desktop ROS installation, and as such must be added separately. 
 
-Report
+# Report
 -----------------------
 ## Sensor Fusion Questions
 ### What can happen if 1 measurement is delayed ?
