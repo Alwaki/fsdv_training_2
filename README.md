@@ -12,7 +12,7 @@ Report
 -----------------------
 ### What can happen if 1 measurement is delayed ?
 
-If a measurement is delayed, this can propagate through the filter and result in a greater covariance (uncertainty) of the estimation of position.
+If a measurement is delayed, this can propagate through the filter and result in a greater covariance (uncertainty) of the estimation of position. It depends how much redundancy is in the sensor update rate. For example, the GNSS updates at a much slower rate than the other sensors. As such, missing a satellite position input would have a greater effect than missing one sensor input from the wheel encoder.
 
 ### Now your IMU gets damaged. Does your implementation deal with it? How could you handle it?
 
