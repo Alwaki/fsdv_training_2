@@ -22,13 +22,14 @@ If a measurement is delayed, this can propagate through the filter and result in
 If the IMU sensor becomes damaged, the implementation will still continue to run. There is no specific failsafe implemented, however alternative sensors will still work. A result will instead become fewer sensor inputs to fuse for the filters. A failsafe implementation could be implemented in the form of detecting no measurements coming from the IMU, and then injecting the system with a greater covariance to compensate for the added measurement uncertainty, essentially compensating for the fact that the system now is running with fewer sensors. Either that, or adding an additional IMU sensor for redundancy.
 
 ### Which category is the most important in the Business Plan Presentation?
-
+Content (20 pts)
 ### The driver must be able to leave the car quickly in an emergency. What does the regulations state about driver egress time?
-
+Egress is considered complete when the driver stands next to the car both feet on the ground.
 ### Is it okay to adjust the angle of the winglets after technical inspection?
-
+Yes
 ### How many lateral g's are simulated during the tilt test?
 
 ### How should the DV log data during the race?
-
+Teams must install the standardised data logger piece of hardware provided by the officials on their vehicle.
 ### What level of wireless communication with the vehicle (exclusing Remote Emergency System) is allowed during the race?
+Only one-way-telemetry for information retrieval is allowed.
